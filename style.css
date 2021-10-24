@@ -1,0 +1,15 @@
+.hide {
+  display: none; 
+ } 
+ 
+ #quiz-intro, #quiz-content {
+   border: 1px solid green;
+ }
+ 
+ .br-5 {
+     border-radius: 5px;
+ }
+ 
+ #quiz p {
+   color: white;
+ }

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ankademin Quiz</title>
+  <style>
+    body{
+      background-color: white;
+      color: rgb(44, 43, 43);
+    }
+    .dark-mode{
+      background-color: rgb(44, 43, 43);
+      color: white;
+    }
+  </style>
+  <!-- slutar styling för dark/light mode-->
+</head>
+<body>
+  <p style="text-align: right;">Light and dark mode
+    <button onclick="toggleFunction()">On/Off</button>
+  </p>
+  <br>
+  <input type="button" onclick="refreshFunction()" value="Refresh" style="float: right;"></input>
+  <h1 style="text-align: center;">Welcome to Ankademin QUIZ!</h1>
+  <!-- slutar dark mode och refrech buttons och extras -->
+
+  <div class="container">
+    <div class="row">
+      <div class="nereikalinga">
+        <div id="quiz-intro" class="p-3 br-5">
+          <h2>Welcome to Ankademin Quiz!</h2>
+          <button type="button" class="btn btn" onclick="startQuiz()">Start Quiz</button>
+        </div>
+        <div id="quiz-content" class="hide p-3 br-5">
+          <p id="quiz_status"></p>
+          <div id="quiz"></div>
+        </div>      
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
