@@ -8,31 +8,30 @@
   <link rel="stylesheet" href="style.css">
   <style>
     body{
-      background-color: white;
-      color: rgb(44, 43, 43);
+      background-color: #ca8;
+      color: rgb(48, 35, 7);
     }
     .dark-mode{
-      background-color: rgb(44, 43, 43);
-      color: white;
+      background-color: rgb(58, 57, 57);
+      color: rgb(247, 229, 229);
     }
   </style>
   <!-- slutar styling för dark/light mode-->
 </head>
 <body>
   <p style="text-align: right;">Light and dark mode
-    <button onclick="toggleFunction()">On/Off</button>
+    <button onclick="toggleFunction()" class="onOff">On/Off</button>
   </p>
   <br>
-  <input type="button" onclick="refreshFunction()" value="Refresh" style="float: right;"></input>
+  <input type="button" onclick="refreshFunction()" value="Restart" style="float: right;" class="restart"></input>
   <!-- <h1 style="text-align: center;">Welcome to Ankademin QUIZ!</h1> -->
   <!-- slutar dark mode och refrech buttons och extras -->
-
   <div class="container">
     <div class="row">
       <div class="nereikalinga">
         <div id="quiz-intro" class="p-3 br-5">
-          <h2 style="text-align: center;">Welcome to Ankademin Quiz!</h2>
-          <button type="button" class="btn btn" onclick="startQuiz()">Start Quiz</button>
+         <h2 style="text-align: center;">Welcome to Ankademin Quiz!</h2> 
+          <button type="button" class="btn_btn" onclick="startQuiz()">Start Quiz</button>
         </div>
         <div id="quiz-content" class="hide p-3 br-5">
           <p id="quiz_status"></p>

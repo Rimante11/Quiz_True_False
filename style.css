@@ -1,20 +1,58 @@
-/*
-.hide {
-  display: none; 
- } 
- 
- #quiz-intro, #quiz-content {
-   border: 1px solid green;
- }
- 
- .br-5 {
-     border-radius: 5px;
- }
- 
- #quiz p {
-   color: white;
- }
- */
- h2{
-  color: rgb(223, 64, 201);
- }
+.onOff{
+  background: #dfe1e2;
+  height: 30px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer; 
+  font-weight: 900;
+  transition: 0.5s;
+  color: #434f53;
+  letter-spacing: 0.5px;  
+}
+.restart{
+  background: #dfe1e2;
+  height: 30px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer; 
+  font-weight: 900;
+  transition: 0.5s;
+  color: #434f53;
+  letter-spacing: 0.5px; 
+}
+/*Start btn*/
+.btn_btn{
+  background: #dfe1e2;
+  height: 30px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer; 
+  font-weight: 900;
+  transition: 0.5s;
+  color: #434f53;
+  letter-spacing: 0.5px; 
+}
+/*Next*/
+.btn{
+  background: #dfe1e2;
+  height: 30px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer; 
+  font-weight: 900;
+  transition: 0.5s;
+  color: #434f53;
+  letter-spacing: 0.5px; 
+}
+/*True/false btn*/
+.m-1{
+  background: #dfe1e2;
+  height: 30px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer; 
+  font-weight: 900;
+  transition: 0.5s;
+  color: #434f53;
+  letter-spacing: 0.5px; 
+}

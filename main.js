@@ -8,15 +8,15 @@ function toggleFunction(){
 
 //2. Function to refresh web page ///////////////////////////////////////////////////////////////
 function refreshFunction(){
-  if(confirm("Are ypu sure, you want to Refresh web page?")){
+  if(confirm("Are ypu sure, you want to restart Quiz?")){
     location.reload();
   }
 }
 
-let position = 0;
-let correct = 0;
-let quiz;
-let quiz_status;
+let position = 0; //position in array
+let correct = 0; //to count corrects
+let quiz = document.querySelector("#quiz");
+let quiz_status = document.querySelector("#quiz_status");
 let question;
 let answerA;
 let answerB;
@@ -32,32 +32,32 @@ let quizQuestions = [
     a: "True",
     b: "False",
     answer: "True",
-    correctAnswer:"Correct! The averege person laughts 17 time in a day.",
-    wrongAnswer: "Wrong choice...",
+    correctAnswer:"Correct!", //add under True/False buttons
+    wrongAnswer: "Wrong!",
   },
   {
     question: "In Georgia (the state), it's illegal to eat fried chicken with a fork.",
     a: "True",
     b: "False",
     answer: "True",
-    correctAnswer: "Correct! You got it right, it is illegal.",
-    wrongAnswer: "Wrong choice...",
+    correctAnswer: "Correct! It is illegal.",
+    wrongAnswer: "Wrong!",
   },
   {
     question: "Frech fries originate comes from France.",
     a: "True",
     b: "False",
     answer: "False",
-    correctAnswer: "Correct! Frech fries comes from Belgium",
-    wrongAnswer: "Wrong Choice...",
+    correctAnswer: "Correct! Frech fries comes from Belgium.",
+    wrongAnswer: "Wrong! It comes from Belgium.",
   },
   {
     question: "Italy is the European country that eats the most chocolate per capita.",
     a: "True",
     b: "False",
     answer: "False",
-    correctAnswer: "Correct! Fun fact, but it's Switzerland.",
-    wrongAnswer: "Wrong Choice... ",
+    correctAnswer: "Correct! It's Switzerland.",
+    wrongAnswer: "Wrong!",
   },
   {
     question: "Octopuses is sea creature that has three hearts",
@@ -65,7 +65,7 @@ let quizQuestions = [
     b: "False",
     answer: "True",
     correctAnswer: "Correct! ",
-    wrongAnswer: "Wrong Choice...",
+    wrongAnswer: "Wrong!",
   },
   {
     question: "Las Vegas is famous by slogan: 'What Happens in Vegas, Stays in Vegas'.",
@@ -73,7 +73,7 @@ let quizQuestions = [
     b: "False",
     answer: "True",
     correctAnswer: "Correct! ",
-    wrongAnswer: "Wrong Choice...",
+    wrongAnswer: "Wrong!",
   },
   {
     question: "'www' stands for World Web Wide.",
@@ -81,7 +81,7 @@ let quizQuestions = [
     b: "False",
     answer: "False",
     correctAnswer: "Correct! It was tricky one! Look again -  World Wide Web! ",
-    wrongAnswer: "Wrong Choice...",
+    wrongAnswer: "Wrong! Look again - World Wide Web!",
   },
   {
     question: "Octagon is a geometric shape generally used for stop signs.",
@@ -89,7 +89,7 @@ let quizQuestions = [
     b: "False",
     answer: "True",
     correctAnswer: "Correct! ",
-    wrongAnswer: "Wrong Choice...",
+    wrongAnswer: "Wrong!",
   },
   {
     question: "Is it true that 12 languages are written from right to left?",
@@ -97,7 +97,7 @@ let quizQuestions = [
     b: "False",
     answer: "True",
     correctAnswer: "Correct! Yep it is 12 languages.",
-    wrongAnswer: "Wrong Choice...",
+    wrongAnswer: "Wrong!",
   },
   {
     question: "Is it true that China invented ice cream?",
@@ -105,7 +105,7 @@ let quizQuestions = [
     b: "False",
     answer: "True",
     correctAnswer: "Correct! Strange, but it is true.",
-    wrongAnswer: "Wrong Choice...",
+    wrongAnswer: "Wrong! It's actually true.",
   },
 ];
 
@@ -154,10 +154,11 @@ function checkAnswer(answer) {
     if (answer == quizQuestions[position].answer) {
       //each time there is a correct answer, value increases to count total corrects
       correct++;
-      
+      //if the answer is correct (text grön)
       quiz.innerHTML += "<div class='success'><p style='color:green'>" + correctAnswer + "</p><button onclick='setQuestion()' class='btn'>Next</button></div>";
       executed = true;
     } else {
+      // else - answer is wrong (text röd)
       quiz.innerHTML += "<div class='unsuccess'><p style='color:red'>" + wrongAnswer + "</p><button onclick='setQuestion()' class='btn'>Next</button></div>";
       executed = true;
     }
