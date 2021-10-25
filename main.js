@@ -120,7 +120,7 @@ function setQuestion() {
     // resets the variable to allow users to restart the quiz
     position = 0;
     correct = 0;
-    // stops rest of renderQuestion function running when quiz is completed
+    // stops rest of setQuestion function, running when quiz is completed
     return false;
   }
 
@@ -135,8 +135,8 @@ function setQuestion() {
 
   // display the question
   /*
-  let questionElemenetH3 = document.createElement("h3");
-  questionElemenetH3.innerHTML = question;
+  let h3 = document.createElement("h3");
+  h3.innerHTML = question;
   quiz.appendChild(questionElemenetH3);
   */
   quiz.innerHTML = "<h3>" + question + "</h3>";
@@ -151,8 +151,9 @@ function checkAnswer(answer) {
   // check if answer matches the correct choice
   if (!executed) {
     if (answer == quizQuestions[position].answer) {
-      //each time there is a correct answer this value increases
+      //each time there is a correct answer, value increases to count total corrects
       correct++;
+      
       quiz.innerHTML += "<div class='success'><p>" + correctAnswer + "</p><button onclick='setQuestion()' class='btn'>Next</button></div>";
 
       executed = true;
