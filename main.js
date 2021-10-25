@@ -142,6 +142,7 @@ function setQuestion() {
   quiz.innerHTML = "<h3>" + question + "</h3>";
 
   // display the answer options
+  // trying to make code only i JS från html
   quiz.innerHTML += "<label> <input type='button' class='m-1' value='" + answerA + "' onclick='checkAnswer(" + answerA + ")'></label>";
   quiz.innerHTML += "<label> <input type='button' class='m-1' value='" + answerB + "' onclick='checkAnswer(" + answerB + ")'></label>";
   executed = false;
@@ -154,11 +155,10 @@ function checkAnswer(answer) {
       //each time there is a correct answer, value increases to count total corrects
       correct++;
       
-      quiz.innerHTML += "<div class='success'><p>" + correctAnswer + "</p><button onclick='setQuestion()' class='btn'>Next</button></div>";
-
+      quiz.innerHTML += "<div class='success'><p style='color:green'>" + correctAnswer + "</p><button onclick='setQuestion()' class='btn'>Next</button></div>";
       executed = true;
     } else {
-      quiz.innerHTML += "<div class='unsuccess'><p>" + wrongAnswer + "</p><button onclick='setQuestion()' class='btn'>Next</button></div>";
+      quiz.innerHTML += "<div class='unsuccess'><p style='color:red'>" + wrongAnswer + "</p><button onclick='setQuestion()' class='btn'>Next</button></div>";
       executed = true;
     }
     position++;
