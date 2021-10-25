@@ -1,3 +1,4 @@
+/*
 .hide {
   display: none; 
  } 
@@ -12,4 +13,8 @@
  
  #quiz p {
    color: white;
+ }
+ */
+ h2{
+  color: rgb(223, 64, 201);
  }
