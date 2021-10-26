@@ -9,7 +9,7 @@
   <style>
     body{
       background-color: #ca8;
-      color: rgb(48, 35, 7);
+      /* color: rgb(48, 35, 7); */
     }
     .dark-mode{
       background-color: rgb(58, 57, 57);
@@ -22,15 +22,16 @@
   <p style="text-align: right;">Light and dark mode
     <button onclick="toggleFunction()" class="onOff">On/Off</button>
   </p>
-  <br>
+  
   <input type="button" onclick="refreshFunction()" value="Restart" style="float: right;" class="restart"></input>
+  <br>
   <!-- <h1 style="text-align: center;">Welcome to Ankademin QUIZ!</h1> -->
   <!-- slutar dark mode och refrech buttons och extras -->
   <div class="container">
     <div class="row">
       <div class="nereikalinga">
         <div id="quiz-intro" class="p-3 br-5">
-         <h2 style="text-align: center;">Welcome to Ankademin Quiz!</h2> 
+         <h2 class="h2" style="text-align: center;">Welcome to Ankademin Quiz!</h2> 
           <button type="button" class="btn_btn" onclick="startQuiz()">Start Quiz</button>
         </div>
         <div id="quiz-content" class="hide p-3 br-5">
