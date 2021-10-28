@@ -1,4 +1,3 @@
-console.log("Hi there!");
 let darkMode = document.body.style.background
 //dark/light mode
 function toggleFunction(){
@@ -6,7 +5,6 @@ function toggleFunction(){
   element.classList.toggle("dark-mode"); // toggle används för att multiple 'clicka' typ som hide and show
 }
 
-//2. Function to refresh web page ///////////////////////////////////////////////////////////////
 function refreshFunction(){
   if(confirm("Are ypu sure, you want to restart Quiz?")){
     location.reload();
@@ -133,16 +131,8 @@ function setQuestion() {
   correctAnswer = quizQuestions[position].correctAnswer;
   wrongAnswer = quizQuestions[position].wrongAnswer;
 
-  // display the question
-  /*
-  let h3 = document.createElement("h3");
-  h3.innerHTML = question;
-  quiz.appendChild(questionElemenetH3);
-  */
+  
   quiz.innerHTML = "<h3>" + question + "</h3>";
-
-  // display the answer options
-  // trying to make code only i JS från html
   quiz.innerHTML += "<label> <input type='button' class='m-1' value='" + answerA + "' onclick='checkAnswer(" + answerA + ")'></label>";
   quiz.innerHTML += "<label> <input type='button' class='m-1' value='" + answerB + "' onclick='checkAnswer(" + answerB + ")'></label>";
   executed = false;
